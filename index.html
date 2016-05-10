@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seating Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="dist/images/favicon.ico">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" type="text/css" href="dist/css/vendor/bootstrap.css" />
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" type="text/css" href="dist/css/stylesheet.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="col-xs-3">
+        <div class="user-action-panel panel">
+          <div class="import-guest-panel">
+            <span>Import Guest List:</span>
+            <input id="importGuestListInput" type="file" />
+          </div>
+          <div class="import-layout-panel">
+            <span>Import Layout:</span>
+            <input id="importLayoutInput" type="file" />
+          </div>
+          <div class="save-action-panel">
+            <button id="saveButton" type="button" class="btn btn-primary">Save Layout</button>
+          </div>
+        </div>
+        <div class="guest-list-panel panel">
+          <div class="container-header col-xs-12">
+            <label>Guest List</label>
+            <div class="container-actions">
+              <div id="addGuestButton" class="add-guest">
+                <span class="glyphicon glyphicon-plus"></span>
+                <span>Add Guest</span>
+              </div>
+            </div>
+          </div>
+          <div class="container-content col-xs-12">
+            <div class="guest-list-container">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-xs-9">
+        <div class="wedding-table-panel clearfix">
+          <div class="container-header col-xs-12">
+            <label>Wedding Tables</label>
+            <div class="container-actions">
+              <div id="addTableButton" class="add-table">
+                <span class="glyphicon glyphicon-plus"></span>
+                <span>Add Table</span>
+              </div>
+            </div>
+          </div>
+          <div class="container-content col-xs-12">
+            <div class="wedding-table-container">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Vendor Scripts -->
+    <script type="text/javascript" src="dist/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="dist/js/vendor/jquery-ui.js"></script>
+    <script type="text/javascript" src="dist/js/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="dist/js/vendor/papaparse.js"></script>
+    <script type="text/javascript" src="dist/js/vendor/underscore.js"></script>
+    
+    <!-- Page Scripts -->
+    <script type="text/javascript" src="dist/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "seating-chart",
+  "authors": [
+    "Rich Gomez <0xkione@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "papaparse": "papa-parse#^4.1.2",
+    "underscore": "^1.8.3",
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "jquery-ui": "^1.11.4"
+  }
+}

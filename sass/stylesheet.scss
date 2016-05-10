@@ -1,0 +1,175 @@
+.user-action-panel {
+  padding: 10px;
+  margin-top: 50px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  white-space: nowrap;
+  
+  > div {
+    padding-bottom: 10px;
+    
+    > * {
+      display: table;
+      margin: auto;
+    }
+    
+    > span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    &:last-of-type {
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.guest-list-panel {
+  > .container-content {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
+.guest {
+  position: relative;
+  padding: 5px;
+  background-color: #F0F0F0;
+  
+  &:nth-of-type(2n) {
+    background-color: #E9E9E9;
+  }
+}
+
+.guest-change {
+  display: none;
+}
+
+.wedding-table-panel {
+  margin-top: 20px;
+  
+  > .container-content {
+    max-height: 675px;
+    overflow-y: auto;
+  }
+}
+
+.container-header {
+  background-color: #DDD;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  > label {
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 17px;
+  }
+}
+
+.container-actions {
+  float: right;
+}
+
+.add-table,
+.add-guest {
+  padding: 5px;
+  font-size: 14px;
+  border: 2px solid #469;
+  background-color: #469;
+  color: #EEE;
+  cursor: pointer;
+  border-radius: 5px;
+  
+  &:hover {
+    background-color: #247;
+    border-color: #CCC;
+  }
+}
+
+.container-content {
+  padding: 15px;
+  background-color: #FAFAFA;
+  
+  > label {
+    display: none;
+  }
+}
+
+.first-name-input,
+.last-name-input {
+  width: 40%;
+}
+
+.wedding-table {
+  padding: 15px 0 0;
+  border: 2px black solid;
+  position: relative;
+  margin-top: 15px;
+  
+  > div {
+    text-align: center;
+  }
+  
+  > label,
+  > input {
+    display: table;
+    margin: 20px auto 30px;
+  }
+  
+  &:nth-of-type(3n + 1) {
+    margin-left: 30px;
+  }
+  
+  &:first-of-type,
+  &:nth-first-of-type(2),
+  &:nth-first-of-type(3) {
+    margin-top: 0;
+  }
+  
+}
+
+.wedding-table-change {
+  display: none;
+  margin: 20px auto 25px;
+}
+
+.remove-table,
+.remove-guest,
+.remove-table-guest {
+  color: #944;
+  position: absolute;
+  right: 7px;
+  top: 9px;
+  cursor: pointer;
+  
+  &:hover {
+    color: #722;
+  }
+}
+
+.save-guest-changes,
+.save-table-changes {
+  color: #494;
+  cursor: pointer;
+  
+  &:hover {
+    color: #272;
+  }
+}
+
+.guest-list-toggle {
+  padding: 5px;
+  border-top: 2px black solid;
+  background-color: #666;
+  color: #EEE;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #444;
+  }
+}
+
+.wedding-guest-container {
+  display: none;
+}
