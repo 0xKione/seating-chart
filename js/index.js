@@ -68,7 +68,7 @@ var Page = function() {
         tabledGuestList.push(guest.exportObject());
       });
       
-      var csv = Papa.unparse(_.sortBy(tabledGuestList, 'tableName'));
+      var csv = Papa.unparse(_.sortBy(tabledGuestList, 'Table'));
       console.log(csv);
       
       if (!csv.match(/^data:text\/csv/i)) {
@@ -274,7 +274,7 @@ var Page = function() {
       
       if (tableIdx != -1) {
         _tableList[tableIdx].removeAllGuests();
-        _tableList.splice(tableIdx);
+        _tableList.splice(tableIdx, 1);
         $(jqueryId).remove();
         
         refreshTableClasses();
@@ -329,15 +329,12 @@ var Page = function() {
       });
       
       if (guestIdx != -1) {
-        _guestList.splice(guestIdx);
+        _guestList.splice(guestIdx, 1);
         $(jqueryId).remove();
       }
     },
-    saveData: function(filename) {
-      var csv = "";
-      
-      
-    }
+    guestList: _guestList,
+    tableList: _tableList
   };
 }();
 

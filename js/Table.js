@@ -2,7 +2,7 @@ class Table {
   constructor(id, name, maxSize) {
     this.id = id;
     this.name = name;
-    this.maxSize = maxSize;
+    this.maxSize = (name == "Head") ? 15 : maxSize;
     this.guestList = [];
   }
   
@@ -12,6 +12,7 @@ class Table {
   
   setName(name) {
     this.name = name;
+    this.maxSize = (name == "Head") ? 15 : this.maxSize;
   }
   
   getName() {
@@ -53,7 +54,7 @@ class Table {
     
     if (guestIdx != -1) {
       guest.setTableId();
-      this.guestList.splice(guestIdx);
+      this.guestList.splice(guestIdx, 1);
       
       $('#table' + this.id + ' .num-guests').html(this.guestList.length);
       
@@ -64,9 +65,9 @@ class Table {
   }
   
   removeAllGuests() {
-    for (let i=0; i < this.guestList; ++i) {
-      this.guestList[i].setTable();
+    while(this.guestList.length > 0) {
+      var guest = this.guestList[0];
+      Page.removeGuestFromTable('#table' + this.id + 'guest' + guest.getId(), guest, this.id);
     }
-    this.guestList = [];
   }
 }
